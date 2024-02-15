@@ -18,7 +18,7 @@ class CounterNode(Node):
 
     def callback_number(self, msg):
         self.number = msg.data
-        self.counter = self.counter + 1
+        self.counter = self.number + 1
 
     def count_publishers(self):
         msg = Int64()
