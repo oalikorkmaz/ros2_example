@@ -35,6 +35,9 @@ ament_target_dependencies(hardware_status_publisher rclcpp my_robot_interface)
 add_executable(number_publisher src/number_publisher.cpp)
 ament_target_dependencies(number_publisher rclcpp example_interfaces)
 
+add_executable(number_counter src/number_counter.cpp)
+ament_target_dependencies(number_counter rclcpp example_interfaces)
+
 
 install (TARGETS 
   cpp_node
@@ -45,6 +48,7 @@ install (TARGETS
   add_two_ints_client
   hardware_status_publisher
   number_publisher
+  number_counter
   DESTINATION lib/${PROJECT_NAME}
   )
 
